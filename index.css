@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  gap: auto;
+  align-items: center;
+  background-color: rgb(176, 196, 222);
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  border-radius: 15px;
+
+  margin: 5px;
+  padding-left: 25px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.title {
+  
+  text-align: center;
+}
+
+.title:hover {
+  opacity: 0.85;
+}
+
+#education {
+  display: flex;
+  width: auto;
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: blanchedalmond;
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+  animation: bigger 4s infinite alternate-reverse;
+}
+
+#edu2 {
+  padding-right: 30px;
+}
+
+#education:hover {
+  border-style: dotted;
+  opacity: 0.85;
+
+  transform: scale(1.2);
+}
+
+#about {
+  border: solid 2px;
+  border-radius: 20px;
+  padding-left: 20px;
+  background-color: aqua;
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+  animation-duration: 5s;
+  animation-name: bigger;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#about:hover {
+  border-style: dotted;
+  opacity: 0.85;
+}
+
+#skills {
+  border: solid 2px;
+  border-radius: 20px;
+  padding-left: 20px;
+  background-color: rgb(24, 252, 165);
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+  animation-duration: 7s;
+  animation-name: bigger;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#skills:hover {
+  border-style: dotted;
+  opacity: 0.85;
+}
+
+#profile {
+  border-radius: 20px;
+  animation: new 1s infinite alternate;
+}
+
+#profile:hover {
+  animation: new 1s infinite alternate, shadow 1s infinite alternate;
+}
+
+@keyframes cloud-effect {
+  0% {
+    transform: scaleX(98%);
+  }
+  50% {
+    transform-origin: left;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: scaleX(100%);
+    transform-origin: right;
+  }
+}
