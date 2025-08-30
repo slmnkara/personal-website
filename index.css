@@ -1,110 +1,110 @@
-.container {
-  display: flex;
+:root {
+  --primary-color: rgb(53, 65, 67);
+  --accent-color: rgb(135, 196, 249);
+  --text-light: whitesmoke;
+  --font-family: "Handlee", cursive;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+#title {
+  font-family: var(--font-family);
+  text-align: center;
+  color: var(--text-light);
+  transition: color 1s ease;
+}
+
+#title:hover #title:focus {
+  color: var(--accent-color);
+}
+
+#subtitle {
+  font-family: var(--font-family);
+  text-align: center;
+  color: var(--text-light);
 }
 
 .card {
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  background-color: var(--text-light);
+  width: 30%;
+  border-radius: 20px;
+  padding: 1px 1px 15px 15px;
+  animation: drop-left-effect 3s;
+  transition: transform 0.3s ease, background-color 1s ease;
+}
+
+.card:hover .card:hover {
+  transform: scale(103%);
+  background-color: var(--accent-color);
+}
+
+.hero-section {
   display: flex;
-  gap: auto;
+  flex-direction: row;
   align-items: center;
-  background-color: rgb(176, 196, 222);
-  box-shadow: 1px 1px 5px rgb(0, 0, 0);
-  border-radius: 15px;
-
-  margin: 5px;
-  padding-left: 25px;
-  font-family: "Courier New", Courier, monospace;
+  justify-content: center;
+  gap: 30px;
+  animation: drop-down-effect 3s;
 }
 
-.title {
-  
-  text-align: center;
-}
-
-.title:hover {
-  opacity: 0.85;
-}
-
-#education {
+.container {
   display: flex;
-  width: auto;
-  border: solid 2px;
-  border-radius: 20px;
-  padding: 10px;
-  padding-left: 20px;
-  background-color: blanchedalmond;
-  font-family: "Courier New", Courier, monospace;
-  margin: 10px;
-  animation: bigger 4s infinite alternate-reverse;
+  align-items: stretch;
+  justify-content: center;
+  gap: 20px;
+  animation: drop-down-effect 3s;
 }
 
-#edu2 {
-  padding-right: 30px;
+#university {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
 }
 
-#education:hover {
-  border-style: dotted;
-  opacity: 0.85;
-
-  transform: scale(1.2);
-}
-
-#about {
-  border: solid 2px;
-  border-radius: 20px;
-  padding-left: 20px;
-  background-color: aqua;
-  font-family: "Courier New", Courier, monospace;
-  margin: 10px;
-  animation-duration: 5s;
-  animation-name: bigger;
-  animation-play-state: running;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#about:hover {
-  border-style: dotted;
-  opacity: 0.85;
-}
-
-#skills {
-  border: solid 2px;
-  border-radius: 20px;
-  padding-left: 20px;
-  background-color: rgb(24, 252, 165);
-  font-family: "Courier New", Courier, monospace;
-  margin: 10px;
-  animation-duration: 7s;
-  animation-name: bigger;
-  animation-play-state: running;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-#skills:hover {
-  border-style: dotted;
-  opacity: 0.85;
-}
-
-#profile {
-  border-radius: 20px;
-  animation: new 1s infinite alternate;
-}
-
-#profile:hover {
-  animation: new 1s infinite alternate, shadow 1s infinite alternate;
-}
-
-@keyframes cloud-effect {
+@keyframes drop-down-effect {
   0% {
-    transform: scaleX(98%);
+    transform: scale(95%) translateY(-200px);
   }
   50% {
-    transform-origin: left;
+    transform: scale(98%);
   }
   100% {
-    transform: rotate(360deg);
-    transform: scaleX(100%);
-    transform-origin: right;
+    transform: scale(100%);
   }
+}
+@keyframes drop-left-effect {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
+  }
+  .hero-section {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card,
+.hero-section,
+.container {
+  will-change: transform; /* GPU acceleration */
 }
