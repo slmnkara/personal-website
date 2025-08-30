@@ -16,7 +16,7 @@ body {
   transition: color 1s ease;
 }
 
-#title:hover #title:focus {
+#title:hover, #title:focus {
   color: var(--accent-color);
 }
 
@@ -31,13 +31,13 @@ body {
   color: var(--primary-color);
   background-color: var(--text-light);
   width: 30%;
-  border-radius: 20px;
-  padding: 1px 1px 15px 15px;
+  border-radius: 10px;
+  padding: 1px 1px 20px 20px;
   animation: drop-left-effect 3s;
   transition: transform 0.3s ease, background-color 1s ease;
 }
 
-.card:hover .card:hover {
+.card:hover, .card:focus {
   transform: scale(103%);
   background-color: var(--accent-color);
 }
@@ -47,6 +47,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin: 20px;
   gap: 30px;
   animation: drop-down-effect 3s;
 }
@@ -55,7 +56,7 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   animation: drop-down-effect 3s;
 }
 
