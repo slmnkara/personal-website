@@ -1,62 +1,47 @@
 body {
-  background-color: antiquewhite;
+  background-color: azure;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-#title {
-  font-family: var(--font-family);
-  text-align: center;
-  color: var(--text-light);
-  transition: color 1s ease;
-}
-
-#title:hover, #title:focus {
-  color: var(--accent-color);
-}
-
-#subtitle {
-  font-family: var(--font-family);
-  text-align: center;
-  color: var(--text-light);
-}
-
-.card {
-  font-family: var(--font-family);
-  color: var(--primary-color);
-  background-color: var(--text-light);
-  width: 30%;
-  border-radius: 10px;
-  padding: 1px 1px 20px 20px;
-  animation: drop-left-effect 3s;
-  transition: transform 0.3s ease, background-color 1s ease;
-}
-
-.card:hover, .card:focus {
-  transform: scale(103%);
-  background-color: var(--accent-color);
-}
-
-.hero-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
   gap: 30px;
-  animation: drop-down-effect 3s;
-}
 
-.container {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 15px;
-  animation: drop-down-effect 3s;
-}
-
-#university {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
   align-items: center;
+  justify-content: center;
+
+  background-color: rgb(234, 240, 250);
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+
+  padding: 0px 20px 0px 20px;
+  margin: 10px;
+}
+
+header {
+  background-color: rgb(234, 240, 250);
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+
+  padding: 15px;
+  margin: 10px;
+}
+
+footer {
+  margin: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
 }
